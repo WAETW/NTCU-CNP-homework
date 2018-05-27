@@ -16,8 +16,11 @@ num3 = random.randrange(1,6)
 
 print(num1,num2,num3)
 
-if num1==num2 and num1==num3 and num2==num1 and num2==num3 and num3==num2 and num3==num1:
+if (num1==num2 and num1==num3):
+    money=money*2
+    print('你贏了!獲得:%d'%money)
+elif (num1==num2 and num1!=num3) or (num1==num3 and num2!=num3) or (num3==num2 and num3!=num1):
     money=money*1.5
-    print('你贏了!獲得:%d%money')
+    print('你贏了!獲得:%d'%money)
 else:
     print('噴了%d'%money)
